@@ -1,4 +1,3 @@
-// filepath: /c:/Users/TUYET NHI/Documents/GitHub/remod-418-build-a-simple-to-do-list-app/.eslintrc.js
 module.exports = {
   extends: [
     'eslint:recommended',
@@ -13,6 +12,7 @@ module.exports = {
   ],
   rules: {
     // Xóa quy tắc 'react-refresh/only-export-components' nếu nó tồn tại
+    'react-refresh/only-export-components': 'off',
   },
   settings: {
     react: {
