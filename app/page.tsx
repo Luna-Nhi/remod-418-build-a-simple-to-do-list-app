@@ -1,9 +1,14 @@
+// filepath: /c:/Users/TUYET NHI/Documents/GitHub/remod-418-build-a-simple-to-do-list-app/app/page.tsx
 import React from 'react';
 import Sidebar from './components/Sidebar';
 import { ThemeProvider } from './context/theme-context';
 import { ThemeSwitch } from './context/theme-switch';
 
-const Page: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
+type PageProps = {
+  children: React.ReactNode;
+};
+
+const Page: React.FC<PageProps> = ({ children }) => {
   return (
     <ThemeProvider>
       <div className="flex">
