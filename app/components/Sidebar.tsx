@@ -1,10 +1,13 @@
-// app/components/Sidebar.tsx
+"use client"
 import React from 'react';
+import { useTheme } from '../context/theme-context'; // Adjust import based on your structure
 import './Sidebar.css';
 
 const Sidebar: React.FC = () => {
+  const { theme } = useTheme(); // Get the current theme
+
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${theme}`}> {/* Apply theme class */}
       <div className="sidebar-header">
         <h2>Shadcn Admin</h2>
         <p>Vite + ShadcnUI</p>
