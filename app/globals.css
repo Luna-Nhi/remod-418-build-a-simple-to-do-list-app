@@ -86,3 +86,17 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.theme-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligns content to the right */
+  width: 100%; /* Ensures the container takes full width */
+  margin-bottom: 1rem; /* Adds space below the theme switch */
+  padding-right: 20px; /* Adds space to the right */
+}
+
+.theme-label {
+  margin-right: 0.5rem; /* Adds space between the label and the switch */
+  font-weight: bold; /* Makes the label stand out */
+}
