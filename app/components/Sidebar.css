@@ -91,3 +91,49 @@
     left: 20px;
     color: #bbb; /* Adjust footer text color for better visibility in dark mode */
 }
+
+/* Nút toggle */
+.toggle-button {
+  background-color: #bbb; /* Màu nền nhẹ */
+  border: none; /* Không có viền */
+  border-radius: 4px; /* Đường viền tròn */
+  width: 36px; /* Chiều rộng */
+  height: 36px; /* Chiều cao */
+  color: white; /* Màu chữ */
+  cursor: pointer; /* Con trỏ khi di chuột */
+  position: absolute;
+  top: 20px;
+  left: 100%; /* Đặt nút bên trái sidebar */
+  transform: translateX(-100%); /* Đẩy nút ra ngoài sidebar */
+  z-index: 1; /* Đảm bảo nút luôn nổi bật */
+  display: flex; /* Sử dụng flexbox để căn giữa */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  transition: background-color 0.2s; /* Hiệu ứng chuyển tiếp */
+}
+
+/* Hiệu ứng hover cho nút */
+.toggle-button:hover {
+  background-color: #0056b3; /* Màu nền khi hover */
+}
+
+/* Hiệu ứng focus cho nút */
+.toggle-button:focus {
+  outline: none; /* Ẩn viền focus */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3); /* Hiệu ứng viền focus nhẹ */
+}
+
+/* Trạng thái đóng của sidebar */
+.sidebar.closed {
+  width: 60px; /* Giảm chiều rộng khi thu gọn */
+}
+
+/* Cập nhật các phần tử bên trong khi sidebar đóng */
+.sidebar.closed .sidebar-menu {
+  display: none; /* Ẩn menu khi sidebar đóng */
+}
+
+.sidebar.closed .sidebar-header,
+.sidebar.closed .sidebar-footer {
+  display: none; /* Ẩn header và footer khi sidebar đóng */
+}
