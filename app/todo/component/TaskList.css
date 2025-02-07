@@ -74,3 +74,30 @@
   margin-bottom: 10px;
   border-radius: 4px;
 }
+
+.add-task-container {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  transition: right 0.3s ease;
+  /* z-index: 1000; */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.add-task-container.open {
+  right: 0;
+}
+
+.add-task-header {
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.add-task-content {
+  padding: 16px;
+}
+
