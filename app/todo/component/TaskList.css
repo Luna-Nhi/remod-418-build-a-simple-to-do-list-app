@@ -1,0 +1,76 @@
+/* Base styles for the input and textarea */
+.todo-daypicker,
+.todo-textarea {
+  border: 1px solid #ccc; /* Default border color */
+  border-radius: 4px; /* Rounded corners */
+  transition: border-color 0.3s, background-color 0.3s; /* Smooth transition */
+  padding: 8px; /* Padding for inputs */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Light theme styles */
+.light .todo-daypicker,
+.light .todo-textarea {
+  background-color: #fff; /* Light background */
+  color: #000; /* Dark text */
+}
+
+.light .todo-daypicker:focus,
+.light .todo-textarea:focus {
+  border-color: #007BFF; /* Blue border on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Dark theme styles */
+.dark .todo-daypicker,
+.dark .todo-textarea {
+  background-color: #2D2D2D; /* Dark background */
+  color: #fff; /* Light text */
+}
+
+.dark .todo-daypicker:focus,
+.dark .todo-textarea:focus {
+  border-color: #66AFE9; /* Light blue border on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Container for date input and icon */
+.date-input-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.date-input-container input[type="date"] {
+  padding-right: 40px; /* Add padding for the icon */
+}
+
+.date-input-container .calendar-icon {
+  position: absolute;
+  right: 10px;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+/* Styles for the task input container */
+.task-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Styles for the task list */
+.task-list {
+  margin-top: 20px;
+}
+
+/* Styles for each task item */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}

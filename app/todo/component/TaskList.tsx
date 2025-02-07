@@ -20,6 +20,8 @@ import {
   SortAsc,
   SortDesc,
 } from "lucide-react";
+import { useTheme } from '../../context/theme-context'; // Adjust import based on your structure
+import './TaskList.css';
 
 type Task = {
   id: number;
@@ -48,6 +50,7 @@ export default function TaskList() {
     key: keyof Task;
     direction: "ascending" | "descending";
   } | null>(null);
+  const { theme } = useTheme(); // Get the current theme
 
   const addTask = () => {
     if (!taskName.trim() || !dueDate.trim()) return;
@@ -163,13 +166,13 @@ export default function TaskList() {
             type="date"
             value={dueDate}
             onChange={(e) => setDueDate(e.target.value)}
-            className="mb-2"
+            className={`mb-2 todo-daypicker ${theme}`}
           />
           <textarea
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             placeholder="Description"
-            className="w-full h-24 p-2 rounded-md resize-none"
+            className={`w-full h-24 p-2 rounded-md resize-none todo-textarea ${theme}`}
           />
             <div className="flex justify-end">
             <Button onClick={addTask}>
